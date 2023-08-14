@@ -5,20 +5,20 @@
 class Ecsplorer < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.2/ecsplorer_Darwin_x86_64.tar.gz"
-      sha256 "b997fb3d16af5fdc5bdf698a5788eb110aecaee17e2bbe3d84877722b42148cc"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.3/ecsplorer_Darwin_x86_64.tar.gz"
+      sha256 "78f79aab0afd4b22fdbd98709c4905a6c1c3edc916c10e9809c77078941cc5e1"
 
       def install
         bin.install "ecsplorer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.2/ecsplorer_Darwin_arm64.tar.gz"
-      sha256 "5b6379db24aa57936594f14c1321a709eca5ce0aaf938fa051ea69c90818f658"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.3/ecsplorer_Darwin_arm64.tar.gz"
+      sha256 "f243d3752e0a71b4c24576bbd4da79d3fb648eae5e897ce978ea476b2871a2d5"
 
       def install
         bin.install "ecsplorer"
@@ -28,16 +28,16 @@ class Ecsplorer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.2/ecsplorer_Linux_arm64.tar.gz"
-      sha256 "d2dc443ab00a947da2f6a8ccc9cb512a26000822b2f676a4bd33bfceca9ca58c"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.3/ecsplorer_Linux_arm64.tar.gz"
+      sha256 "381ad599bdab207b01009083aeedd6ffb7210fff108f35fdb9cab23ff6fc87cc"
 
       def install
         bin.install "ecsplorer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.2/ecsplorer_Linux_x86_64.tar.gz"
-      sha256 "c44aaa739ea8fd5f0d591f5b0e91a35999abc3d3c7d7c90794a4725efe2b7ed3"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.3/ecsplorer_Linux_x86_64.tar.gz"
+      sha256 "fd90f75bf6b5e6dbd831a9e409470dac57773257e51caa164327bdb8eb798bdd"
 
       def install
         bin.install "ecsplorer"
