@@ -5,20 +5,20 @@
 class Accessory < Formula
   desc ""
   homepage ""
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/masaushi/accessory/releases/download/v0.2.1/accessory_Darwin_arm64.tar.gz"
-      sha256 "b2afe0fc558b2685cd0ccfe0573a68647b486d38d534afacd88e646e7f2a93ce"
+    on_intel do
+      url "https://github.com/masaushi/accessory/releases/download/v0.3.0/accessory_Darwin_x86_64.tar.gz"
+      sha256 "4fa128cf42664565055d516ec8b6a49dee70043b40f9b34041ce802b154d628a"
 
       def install
         bin.install "accessory"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/masaushi/accessory/releases/download/v0.2.1/accessory_Darwin_x86_64.tar.gz"
-      sha256 "6ff40564a7c584fd96461ccfaef48dfb6c69578302801e2818c148fd0a2c1607"
+    on_arm do
+      url "https://github.com/masaushi/accessory/releases/download/v0.3.0/accessory_Darwin_arm64.tar.gz"
+      sha256 "995cbf93dff4f908ca36966884ec3991b5ab93ca6fe2ce05fece6e6cce28cbee"
 
       def install
         bin.install "accessory"
@@ -27,20 +27,24 @@ class Accessory < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.2.1/accessory_Linux_arm64.tar.gz"
-      sha256 "d55287d30e6e87f32e3bbcf72dda190acadc93c3c2298fd609248eace4fa0e26"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/masaushi/accessory/releases/download/v0.3.0/accessory_Linux_x86_64.tar.gz"
+        sha256 "efdcff777cf2f0254f555cb1a2284f6c479c6dc317af029c9166d702f9826b98"
 
-      def install
-        bin.install "accessory"
+        def install
+          bin.install "accessory"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/masaushi/accessory/releases/download/v0.2.1/accessory_Linux_x86_64.tar.gz"
-      sha256 "6e8e2514e63a2376342b8fe1cb6a3c36327ab10ae9daf4728c1798231def41d0"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/masaushi/accessory/releases/download/v0.3.0/accessory_Linux_arm64.tar.gz"
+        sha256 "cc784521abf23aa35c5750febce97aba039c0706e572b076f6cb73650fcc134b"
 
-      def install
-        bin.install "accessory"
+        def install
+          bin.install "accessory"
+        end
       end
     end
   end
