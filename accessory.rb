@@ -5,20 +5,20 @@
 class Accessory < Formula
   desc ""
   homepage ""
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/masaushi/accessory/releases/download/v0.3.1/accessory_Darwin_x86_64.tar.gz"
-      sha256 "2c356bb0583b6d2b7b776425b9d80eb8d52f115c7e375e8900922025a26dfb63"
+      url "https://github.com/masaushi/accessory/releases/download/v0.3.2/accessory_Darwin_x86_64.tar.gz"
+      sha256 "254d641764c11810e2d880e1d1c81d5b813d9f525abdd5a908082d47b9167412"
 
       def install
         bin.install "accessory"
       end
     end
     on_arm do
-      url "https://github.com/masaushi/accessory/releases/download/v0.3.1/accessory_Darwin_arm64.tar.gz"
-      sha256 "381ae740f83a82bec3231f66f8324f37102a5a66197624923fa618308682e918"
+      url "https://github.com/masaushi/accessory/releases/download/v0.3.2/accessory_Darwin_arm64.tar.gz"
+      sha256 "72c7aeeee8b444808fd92aabe285d9e368cd6b193fed3160380a847d5fd77a93"
 
       def install
         bin.install "accessory"
@@ -29,8 +29,8 @@ class Accessory < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masaushi/accessory/releases/download/v0.3.1/accessory_Linux_x86_64.tar.gz"
-        sha256 "9cef88867bf85197ee94a22742daf2990763588070a8a7d565575ec319967f61"
+        url "https://github.com/masaushi/accessory/releases/download/v0.3.2/accessory_Linux_x86_64.tar.gz"
+        sha256 "6200fe3853ae44cbedaa14a85f33bd4e3c95e9e787dd18ecf7ed641686516cd3"
 
         def install
           bin.install "accessory"
@@ -39,8 +39,8 @@ class Accessory < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masaushi/accessory/releases/download/v0.3.1/accessory_Linux_arm64.tar.gz"
-        sha256 "f6273a425a7c2742a2647464ac85c20ace50b3a06c65ef4bf2e2de4342fa0508"
+        url "https://github.com/masaushi/accessory/releases/download/v0.3.2/accessory_Linux_arm64.tar.gz"
+        sha256 "9a1fb2858e416cfbe8ea534270211fa972c172b7f1f0e7713529079b2443c0d1"
 
         def install
           bin.install "accessory"
