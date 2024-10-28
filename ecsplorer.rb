@@ -5,20 +5,20 @@
 class Ecsplorer < Formula
   desc ""
   homepage ""
-  version "0.0.7"
+  version "0.1.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.7/ecsplorer_Darwin_x86_64.tar.gz"
-      sha256 "276828c121deac008187c4cc65f7af123c25f2307291a328e351f9166c980b9c"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Darwin_x86_64.tar.gz"
+      sha256 "cf3c8a5d5970a3d130cfa70301949a4d4ae9d3cb96a29204f2913b6a6a62535e"
 
       def install
         bin.install "ecsplorer"
       end
     end
     on_arm do
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.7/ecsplorer_Darwin_arm64.tar.gz"
-      sha256 "ca5ce5ff0ac9ec3924fa264affb5fa17eeec2da1241ce2e30a5ad7d539026104"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Darwin_arm64.tar.gz"
+      sha256 "392f320610172cf1bd575ca79a71769fdd5808deecd60628583e53162d1931a5"
 
       def install
         bin.install "ecsplorer"
@@ -29,8 +29,8 @@ class Ecsplorer < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.7/ecsplorer_Linux_x86_64.tar.gz"
-        sha256 "32fffe3b2c14e8a4d498e2a02d89c7350dc50cdd5b91acbb8f3ec124ea32c0fe"
+        url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Linux_x86_64.tar.gz"
+        sha256 "297683e07675a8c224d05585eb9a6ff38182dcd32a059ab6c0cea77aff269db7"
 
         def install
           bin.install "ecsplorer"
@@ -39,8 +39,8 @@ class Ecsplorer < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masaushi/ecsplorer/releases/download/v0.0.7/ecsplorer_Linux_arm64.tar.gz"
-        sha256 "8ec708d079290f4bfe19ed2ed847d0027417c9bed982500926d7b1717bfe6fff"
+        url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Linux_arm64.tar.gz"
+        sha256 "75117f74888e6a93efa843d75ecf337db3a2bb05ea14688f10b019d5c1d7dafe"
 
         def install
           bin.install "ecsplorer"
