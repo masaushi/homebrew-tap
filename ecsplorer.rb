@@ -5,20 +5,20 @@
 class Ecsplorer < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    on_intel do
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Darwin_x86_64.tar.gz"
-      sha256 "cf3c8a5d5970a3d130cfa70301949a4d4ae9d3cb96a29204f2913b6a6a62535e"
+    if Hardware::CPU.intel?
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.1/ecsplorer_Darwin_x86_64.tar.gz"
+      sha256 "6ca7438950c0b8eb7ca213645fa6bfee473e86dd34876f3941730b8afc3dae63"
 
       def install
         bin.install "ecsplorer"
       end
     end
-    on_arm do
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Darwin_arm64.tar.gz"
-      sha256 "392f320610172cf1bd575ca79a71769fdd5808deecd60628583e53162d1931a5"
+    if Hardware::CPU.arm?
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.1/ecsplorer_Darwin_arm64.tar.gz"
+      sha256 "6d63c4c8674e1b37b0b382a5198cab3e2c51938d349eac2ef4ae8c3c85cdd253"
 
       def install
         bin.install "ecsplorer"
@@ -27,24 +27,18 @@ class Ecsplorer < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Linux_x86_64.tar.gz"
-        sha256 "297683e07675a8c224d05585eb9a6ff38182dcd32a059ab6c0cea77aff269db7"
-
-        def install
-          bin.install "ecsplorer"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.1/ecsplorer_Linux_x86_64.tar.gz"
+      sha256 "2c349f712e421c57c2070626eeb950a69ab79a7e3ae53580e7dc3defadf1680c"
+      def install
+        bin.install "ecsplorer"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.0/ecsplorer_Linux_arm64.tar.gz"
-        sha256 "75117f74888e6a93efa843d75ecf337db3a2bb05ea14688f10b019d5c1d7dafe"
-
-        def install
-          bin.install "ecsplorer"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.1.1/ecsplorer_Linux_arm64.tar.gz"
+      sha256 "ed28da2a6bd95fc757c8a6605122c2e871b4482d7408a6f7263fb4db156ca644"
+      def install
+        bin.install "ecsplorer"
       end
     end
   end
