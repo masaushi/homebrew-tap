@@ -5,20 +5,20 @@
 class Accessory < Formula
   desc ""
   homepage ""
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masaushi/accessory/releases/download/v0.5.0/accessory_Darwin_x86_64.tar.gz"
-      sha256 "8aad8d72831c13bc5ca208ba4410487915f3e1d473a2f9f53a9496ae1b7a063a"
+      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Darwin_x86_64.tar.gz"
+      sha256 "2da2a4637cb63cd2266e9dcaa64a0ee157f46d2964253252911282dc5243868b"
 
       def install
         bin.install "accessory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masaushi/accessory/releases/download/v0.5.0/accessory_Darwin_arm64.tar.gz"
-      sha256 "1e62a88c06713e415da0e633a5a4c8f071c9bab63674f7f13d7365d1e700525d"
+      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Darwin_arm64.tar.gz"
+      sha256 "6b1c4bcdd4934be81796875b2af4d5444d3708b87ed91ab7cdb1b8b728fbd1b2"
 
       def install
         bin.install "accessory"
@@ -27,16 +27,16 @@ class Accessory < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.5.0/accessory_Linux_x86_64.tar.gz"
-      sha256 "0548140918d9edaa3973548815b8dc02ec426b2047cac83250378e2058571bd2"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Linux_x86_64.tar.gz"
+      sha256 "a6bfb2171ca7a699b2b38dcefaacbf4578236f452c62f4fcec0289011edc9fca"
       def install
         bin.install "accessory"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.5.0/accessory_Linux_arm64.tar.gz"
-      sha256 "a8f54859473a0d31c1476531537be9dd7ae6e4cce668aacf048bd648bdba9acd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Linux_arm64.tar.gz"
+      sha256 "e9bbcda66689968a9a5874f60dd5d9e75c534778f22ce742982f5b48d90b9d72"
       def install
         bin.install "accessory"
       end
