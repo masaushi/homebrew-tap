@@ -5,20 +5,20 @@
 class Accessory < Formula
   desc ""
   homepage ""
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Darwin_x86_64.tar.gz"
-      sha256 "2da2a4637cb63cd2266e9dcaa64a0ee157f46d2964253252911282dc5243868b"
+      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Darwin_x86_64.tar.gz"
+      sha256 "a945adb48c5983d51aaa298dacfe3267c457c82b25b40d23d7d6499ad0564000"
 
       def install
         bin.install "accessory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Darwin_arm64.tar.gz"
-      sha256 "6b1c4bcdd4934be81796875b2af4d5444d3708b87ed91ab7cdb1b8b728fbd1b2"
+      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Darwin_arm64.tar.gz"
+      sha256 "f65babae97bc50e7ca760d213fb8a454754ebf5ac5ab72b63f3738724a9ae220"
 
       def install
         bin.install "accessory"
@@ -28,15 +28,15 @@ class Accessory < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Linux_x86_64.tar.gz"
-      sha256 "a6bfb2171ca7a699b2b38dcefaacbf4578236f452c62f4fcec0289011edc9fca"
+      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Linux_x86_64.tar.gz"
+      sha256 "e56d15b18a283d55432fbf90c2dd9a45136349e36caa4855b671670c2d0a2d2b"
       def install
         bin.install "accessory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.6.0/accessory_Linux_arm64.tar.gz"
-      sha256 "e9bbcda66689968a9a5874f60dd5d9e75c534778f22ce742982f5b48d90b9d72"
+      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Linux_arm64.tar.gz"
+      sha256 "af261e9a9741e123926d745164ef0cdd4ae4579b80c8b3bdf170532963651c72"
       def install
         bin.install "accessory"
       end
