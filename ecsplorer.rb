@@ -5,20 +5,20 @@
 class Ecsplorer < Formula
   desc ""
   homepage ""
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.0/ecsplorer_Darwin_x86_64.tar.gz"
-      sha256 "0f522badf8779a7b479b281a4a2695d43321d4569cfb83c0d17a2d6dab990e98"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.1/ecsplorer_Darwin_x86_64.tar.gz"
+      sha256 "b03140796651f1f4b102c5b0cffcee717c8f53c15018190a6e81bff9e333f16a"
 
       define_method(:install) do
         bin.install "ecsplorer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.0/ecsplorer_Darwin_arm64.tar.gz"
-      sha256 "823b3d6e17be33d8047e2d2f2adac772072ff6fc532b2f5fa6433ab9315da9f0"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.1/ecsplorer_Darwin_arm64.tar.gz"
+      sha256 "d7788de71d05b9508e0b3a3012fcd82373d33574c953a9c2a51727fcc685cf57"
 
       define_method(:install) do
         bin.install "ecsplorer"
@@ -28,15 +28,15 @@ class Ecsplorer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.0/ecsplorer_Linux_x86_64.tar.gz"
-      sha256 "d5ca78412592d37e0add8f57003d861ae2359f9d7623e84ba6b5899c152be8c9"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.1/ecsplorer_Linux_x86_64.tar.gz"
+      sha256 "d040d995910a00ecfc835ac48c25209da2ceebcac9dcf01703df8f09b465cf8e"
       define_method(:install) do
         bin.install "ecsplorer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.0/ecsplorer_Linux_arm64.tar.gz"
-      sha256 "1e4c1f114d40b7c9b5b2b4e4487ae1cc56bb49b1442821cf11bcea58544ce8ed"
+      url "https://github.com/masaushi/ecsplorer/releases/download/v0.3.1/ecsplorer_Linux_arm64.tar.gz"
+      sha256 "6a3a7f96190df85c2a9d3f80070a56df12975633e68b624196aa9cc0dabf0e2d"
       define_method(:install) do
         bin.install "ecsplorer"
       end
