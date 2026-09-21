@@ -5,22 +5,22 @@
 class Accessory < Formula
   desc ""
   homepage ""
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Darwin_x86_64.tar.gz"
-      sha256 "a945adb48c5983d51aaa298dacfe3267c457c82b25b40d23d7d6499ad0564000"
+      url "https://github.com/masaushi/accessory/releases/download/v0.8.0/accessory_Darwin_x86_64.tar.gz"
+      sha256 "e3473be16f2cc3bcf6e180679c45e772bb543d87370bccb0d0dda88c5360df9c"
 
-      def install
+      define_method(:install) do
         bin.install "accessory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Darwin_arm64.tar.gz"
-      sha256 "f65babae97bc50e7ca760d213fb8a454754ebf5ac5ab72b63f3738724a9ae220"
+      url "https://github.com/masaushi/accessory/releases/download/v0.8.0/accessory_Darwin_arm64.tar.gz"
+      sha256 "c3323b3075b38337accc0e50b67f4af0d6aeca114dc3398898badecf0eddfd00"
 
-      def install
+      define_method(:install) do
         bin.install "accessory"
       end
     end
@@ -28,16 +28,16 @@ class Accessory < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Linux_x86_64.tar.gz"
-      sha256 "e56d15b18a283d55432fbf90c2dd9a45136349e36caa4855b671670c2d0a2d2b"
-      def install
+      url "https://github.com/masaushi/accessory/releases/download/v0.8.0/accessory_Linux_x86_64.tar.gz"
+      sha256 "b99ff6ef60733ccda7f61adf2a6d7ba11b2112f0dc7b7995e86de268647866dd"
+      define_method(:install) do
         bin.install "accessory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masaushi/accessory/releases/download/v0.7.0/accessory_Linux_arm64.tar.gz"
-      sha256 "af261e9a9741e123926d745164ef0cdd4ae4579b80c8b3bdf170532963651c72"
-      def install
+      url "https://github.com/masaushi/accessory/releases/download/v0.8.0/accessory_Linux_arm64.tar.gz"
+      sha256 "135f3b06248a8e2f83726ecebd42e08569bab7d2efa21aab6c72427d71063c26"
+      define_method(:install) do
         bin.install "accessory"
       end
     end
